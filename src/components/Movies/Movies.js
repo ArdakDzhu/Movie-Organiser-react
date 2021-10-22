@@ -26,7 +26,10 @@ class Movies extends Component {
             <ul className="movies">
                 {this.state.movies.map((movie) => (
                     <li className="movies__item" key={movie.imdbID}>
-                        <MovieItem {...movie} />
+                        <MovieItem
+                            addFilmsToList={this.props.addFilmsToList}
+                            {...movie}
+                        />
                     </li>
                 ))}
             </ul>

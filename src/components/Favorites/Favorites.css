@@ -31,3 +31,11 @@
     opacity: 0.9;
     transition: all 0.2s linear;
 }
+
+.btnDelFromFav {
+    display: flex;
+}
+
+.btnDelFromFav button {
+    border-radius: 100%;
+}
