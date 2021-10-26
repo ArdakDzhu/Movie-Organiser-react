@@ -7,11 +7,27 @@ import './reset.css';
 import './common.css';
 
 class App extends React.Component {
+
+  state = {
+    keyFromServer: '',
+  }
+
+  getKey = (key) => {
+    this.setState({
+      keyFromServer: key
+    })
+  }
+
   render() {
+    console.log(this.state.keyFromServer)
     return (
       <div className="app">
-        <Route path="/" exact component={MainPage} />
-        <Route path="/list/:id" exact component={ListPage} />
+        <Route path="/" exact> 
+          <MainPage getKey={this.getKey}/> 
+        </Route>
+        <Route path="/list/:id" exact>
+          <ListPage keyFromServer={this.state.keyFromServer}/>
+        </Route>
       </div>
     );
   }

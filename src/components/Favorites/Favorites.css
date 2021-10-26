@@ -34,8 +34,14 @@
 
 .btnDelFromFav {
     display: flex;
+    justify-content: space-between;
 }
 
 .btnDelFromFav button {
-    border-radius: 100%;
+    margin: 2px 0px;
+}
+
+.disable {
+    background-color: #d3d3d3;
+    pointer-events: none;
 }
